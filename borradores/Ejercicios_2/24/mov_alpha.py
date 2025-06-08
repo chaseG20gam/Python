@@ -1,4 +1,5 @@
-def repeat_case(str_):
+def mov_alpha(str_):
+    
     alphabet = "abcdefghijklmnñopqrstuvwxyz"
     result = []
 
@@ -8,14 +9,15 @@ def repeat_case(str_):
         for i in str_:
             if i.isalpha():
                 index = alphabet.index(i.lower())
-                result.append(i * (index + 1))
+                new_index = (index + 1) % len(alphabet)
+                result.append(alphabet[new_index] if i.islower() else alphabet[new_index].upper())
             else:
                 result.append(i)
         return ''.join(result)
-
+    
 def main():
     str_ = input("Enter a string: ")
-    print(repeat_case(str_))
+    print(mov_alpha(str_))
 
 if __name__ == "__main__":
     main()
