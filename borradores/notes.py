@@ -134,7 +134,7 @@ with open("output.txt", "w") as file:
 with open("output.txt", "a") as file:
     file.write("Agregando una nueva línea al archivo.\n")  # Agrega una línea al final del archivo existente
 
-# git push -u origin main
+# 
 
 
 
