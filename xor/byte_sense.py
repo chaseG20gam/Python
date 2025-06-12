@@ -50,7 +50,7 @@ def reverse_bytesense(hex_text, range):
     concat_bytes will always be 1.5 times the length of the original byte sequence
     -so its always gonna be two thirds
     """
-    orig_bytes = concat_bytes[:len(concat_bytes) * 2 // 3]
+    orig_bytes = concat_bytes[:len(concat_bytes) * 2 // 3] # has to be // because i need an integer for slicing. 2/3 gives me decimals
 
     if new_encrypt_range == range:
         original_text = orig_bytes.decode('utf-8')
