@@ -1,6 +1,6 @@
 def mov_alpha(str_):
     
-    alphabet = "abcdefghijklmnñopqrstuvwxyz"
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
     result = []
 
     if str_ == '':
