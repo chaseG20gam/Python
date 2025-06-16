@@ -12,7 +12,6 @@ def bytesense(input_text, range):
 
     concat_bytes = text_tobytes + even_bytes # concat the result of the text and the even result
     # print(concat_bytes)
-
     
     i = 0
     len_bytes = len(concat_bytes)
@@ -59,7 +58,6 @@ def reverse_bytesense(hex_text, range):
         print('failed to decode, probably due to a bad encrypting range request')
 
 
-
 def main():
     text = input('input a text: ')
     encrypt_range = int(input('encrypt range: ')) # times added at the index to add complexity to the encrypting, could be changed
@@ -73,8 +71,5 @@ def main():
     else:
         print('program terminated')
 
-
 if __name__ == '__main__':
     main()
-
-

@@ -4,6 +4,9 @@
 # Linea 36: Listas
 # Linea 72: Tuplas
 # Linea 105: Lectura de archivos
+# Linea 138: Diccionarios
+# Linea 176: Bytes
+# Linea 280: OOP, Object Oriented Prog.
 
 
 
@@ -260,7 +263,25 @@ print(cad1)
 for letter in cad1:
     print(f'{letter} = {chr(letter)}')
 
+# --------------------------------------------------------------------------------------------
 
+def print_alph():
+    for i in range(97, 123):
+        print(chr(i))
+
+    alph = []
+    for i in range(ord('a'), ord('z') + 1):
+        alph.append(chr(i))
+    print(alph)
+
+print_alph()
+
+# --------------------------------------------------------------------------------------------
+
+# Object oriented programing
+
+# NameSpace: Un espacio de nombres es un contenedor que permite agrupar identificadores (nombres) y evitar colisiones entre ellos.
+# se accede a los namespaces mediante scope, que es el contexto en el que se puede acceder a un identificador. Global o local.
 
 
 
