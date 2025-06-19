@@ -275,6 +275,7 @@ def print_alph():
     print(alph)
 
 print_alph()
+print()
 
 # --------------------------------------------------------------------------------------------
 
@@ -282,6 +283,51 @@ print_alph()
 
 # NameSpace: Un espacio de nombres es un contenedor que permite agrupar identificadores (nombres) y evitar colisiones entre ellos.
 # se accede a los namespaces mediante scope, que es el contexto en el que se puede acceder a un identificador. Global o local.
+
+# Classes, decorators and properties
+class Car: # Se declara una clase que contendra objetos de esa clase. una clase coche creara objetos de clase coche
+
+    def __init__(self, brand, model, year, power, fuel_cons, km): # los parametros que una clase coche deberia tener
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.power = power
+        self.fuel_cons = fuel_cons
+        self.km = km
+
+    """def __str__(self): # la function str devuelve los resultados como strings, ya que sino, devilveria la posicion de memoria del objeto
+        return f'{self.brand, self.model, self.year, self.power, self.fuel_cons, self.km}'"""
+    
+    def print_parm(self):
+        print  (f'- Brand: {self.brand}\n'
+                f'- Model: {self.model}\n'
+                f'- Year: {self.year}\n'
+                f'- Power: {self.power} Hp\n'
+                f'- Fuel Consumption: {self.fuel_cons} l/100\n'
+                f'- Kilometers: {self.km} km\n')
+        
+
+car1 = Car('BMW', 'X5', 2025, 213, 15, 0)
+
+car1.print_parm()
+car1.km = 15
+car1.print_parm()
+
+# Herencias
+
+class ElectricCar(Car):
+    def __init__(self, brand, model, year, power, fuel_cons, km, battery):
+        super().__init__(brand, model, year, power, fuel_cons, km)
+        self.battery = battery
+
+    def battery_details(self):
+        print(f'Battery capacity: {self.battery} Kwh/100\n')
+
+car2 = ElectricCar('Tesla', 'Model X', 2024, 290, 11, 0, 564)
+
+car2.print_parm() 
+car2.battery_details()
+
 
 
 
