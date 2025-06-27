@@ -328,9 +328,30 @@ car2 = ElectricCar('Tesla', 'Model X', 2024, 290, 11, 0, 564)
 car2.print_parm() 
 car2.battery_details()
 
+# string utils
+string = 'The universe is, and we are'
+print(string.lower()) # vuelve todos los caracteres minusculas: the universe is, and we are
+print(string.swapcase()) # cambia las mayusculas por minusculas y las minusculas por mayusculas: tHE UNIVERSE IS, AND WE ARE
+print(string.title()) # por cada letra precedida de espacio, la vuelve mayuscula: The Universe Is, And We Are
+print(string.upper()) # todos los caracteres mayusculas: THE UNIVERSE IS, AND WE ARE
+print(string.count('e')) # cuenta todas las coincidencias: 5
+print(string.count('we')) # 1
+print(string.find('e')) # devuelve el indice de la primera coincidencia: 2
+print(string.find('T')) # 0
+print(string.find('t')) # devuelve -1 si es error, no hay coincidencias (case sensitive)
 
+# string format
+print(string.center(20)) # centra con 20 caracteres por cada lado
+print(string.ljust(20)) # justifica a la izquierda y añade 20 caracteres vacios por la derecha
+print(string.lstrip()) # elimina los espacios que va encontrando desde la izquierda hasta que topa con un caracter y lo devuelve
+print(string.rstrip()) # lo mismo pero por la derecha
+print(string.strip()) # elimina los espacios por ambos lados
+print(string.replace(' ', '')) # reemplaza las coincidencias del priemr argumento por un segundo
+print(string.split())
 
+string2 = '  The    Universe   Is    And We   Are    '
+string2 = ' '.join(string2.split()) # elimina espacios de mas entre palabras
+print(string2)  # Output: Hola Que Tal
 
-
-
-
+string3 = ' '.join(string) # añade un espacio entre todos los caracteres
+print(string3)
