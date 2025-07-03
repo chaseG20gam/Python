@@ -23,8 +23,6 @@ Requisitos:
 
 # Tu programa empieza aquí:
 def convert_and_average(t1, t2, t3):
-      
-      """ Convierte tres temperaturas en Celsius a float y calcula su promedio """
 
       t1 = float(t1) 
       t2 = float(t2)
@@ -33,7 +31,6 @@ def convert_and_average(t1, t2, t3):
       average = (t1 + t2 + t3) / 3
       return f"La temperatura media es {round(average, 2)} grados Celsius"
 
-# Llamada a la función con las temperaturas dadas
 result = convert_and_average("22.5", "19.0", "25.3")
 print(result)
 

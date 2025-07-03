@@ -21,16 +21,14 @@ Requisitos:
 
 # Tu programa empieza aquí:
 def calculate_total(rent_str, food_str, transport_str):
-    """
-    Esta función recibe tres strings que representan gastos y devuelve el total como float.
-    """
-    rent = float(rent_str)  # Convertimos el string de alquiler a float
+
+    rent = float(rent_str) 
     food = float(food_str)  
     transport = float(transport_str)  
     
-    total = rent + food + transport  # Calculamos el total sumando los tres valores
+    total = rent + food + transport  
     return total  
 
-# Llamamos a la función con los valores dados y guardamos el resultado
+
 total = calculate_total("750.50", "245.75", "60")  
 print(total)  

@@ -20,10 +20,7 @@ Requisitos:
 
 # Tu programa empieza aquí:
 def ex_start(word_str):
-    """
-    Esta función recibe un string y devuelve los 3 primeros caracteres.
-    """
-    return word_str[:3]  # Usamos slicing para obtener los primeros 3 caracteres
+    return word_str[:3]  # use slicing
 
-result = ex_start("developer")  # Llamamos a la función con el string "developer"
+result = ex_start("developer")  
 print(result)

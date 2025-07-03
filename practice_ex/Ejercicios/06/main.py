@@ -22,13 +22,11 @@ Requisitos:
 import hashlib
 
 def calc_hash(mensaje):
-      """Calcula el hash SHA256 de un mensaje y lo devuelve como string hexadecimal."""
       
       hash_object = hashlib.sha256(mensaje.encode())
       return hash_object.hexdigest()
 
 def v_message(mensaje_original, hash_recibido):
-      """Verifica si el hash del mensaje original coincide con el hash recibido."""
       hash_calculado = calc_hash(mensaje_original)
       return hash_calculado == hash_recibido
 

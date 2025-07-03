@@ -20,10 +20,8 @@ Requisitos:
 
 # Tu programa empieza aquí:
 def analyze_word(word_case):
-   n = len(word_case)  # Calculamos la cantidad de letras de la palabra
+   n = len(word_case)
    return f"La palabra {word_case} tiene {n} letras."
 
-""" Documentación de la función analyze_word """
-
-result = analyze_word("murcielago")  # Llamamos a la función con la palabra "murcielago"
-print(result)  # Imprimimos el resultado
+result = analyze_word("murcielago") 
+print(result)  # print result
