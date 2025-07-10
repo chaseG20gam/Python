@@ -355,3 +355,35 @@ print(string2)  # Output: Hola Que Tal
 
 string3 = ' '.join(string) # añade un espacio entre todos los caracteres
 print(string3)
+
+# --------------------------------------------------------------------------------------------
+
+# Exceptions
+
+# assert: se usa para verificar condiciones y lanzar una excepción si la condición no se cumple
+passwd = input('password: ')
+assert len(passwd) > 8, 'password cant be less than 8 characters' # si el input es menor de 8 caracteres, lanza error
+
+# try-except: se usa para manejar excepciones y evitar que el programa se detenga
+try:
+    passwd1 = int(input('enter a number: '))
+    print(f'you entered: {passwd1}')
+except ValueError as e:
+    print(f'Error: {e}. please enter a valid number.')
+
+# finally: se usa para ejecutar código que siempre se ejecutará, independientemente de si se produjo una excepción o no
+try:
+    passwd2 = int(input('enter another number: '))
+    print(f'you entered: {passwd2}')
+except ValueError as e:
+    print(f'Error: {e}. please enter a valid number.')
+finally:
+    print('this will always execute, regardless of whether an exception occurred or not.')
+
+try:
+    undefined = None
+except NameError:
+    print('variable not defined')
+    undefined = True
+finally:
+    del undefined # remove the unused variable from memory to securize
